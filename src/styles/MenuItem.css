@@ -1,15 +1,26 @@
 .menu-item {
   margin-bottom: 20px;
+  flex: 1 0 auto;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .card {
   background-color: #2f75a9;
   color: white;
-  height: 100%; /* Ensure the card takes the full height of the column */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .card img {
-  height: 150px;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Ensure the image is square */
   object-fit: cover; /* Ensure the image covers the full area */
 }
 
@@ -22,6 +33,11 @@
 .card-title {
   color: #ee6953;
   font-size: 1.2rem;
+  font-family: 'Fredoka One', sans-serif;
+}
+
+.card-text {
+  font-family: 'Fredoka One', sans-serif;
 }
 
 .btn-primary {

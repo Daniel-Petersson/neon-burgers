@@ -1,42 +1,75 @@
 .row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .menu-item {
-    margin-bottom: 20px;
-  }
-  
-  .card {
-    background-color: #2f75a9;
-    color: white;
-    height: 100%; /* Ensure the card takes the full height of the column */
-  }
-  
-.card img {
-    width: 100%; /* Ensure the image takes the full width of the card */
-    height: 150px;
-    object-fit: cover; /* Ensure the image covers the full area */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
+
+.col-lg-3,
+.col-md-4,
+.col-sm-6,
+.col-xs-12 {
+  display: flex;
+  align-items: stretch;
+}
+
+.menu-item {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card {
+  background-color: #2f75a9;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Ensure the image is square */
+  object-fit: cover; /* Ensure the image covers the full area */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  color: #ee6953;
+  font-size: 1.2rem;
+  font-family: 'Fredoka One', sans-serif;
   
-  .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+}
+
+.card-text {
+  font-family: 'Fredoka One', sans-serif;
+}
+
+.btn-primary {
+  background-color: #17d580;
+  border: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .row {
+    grid-template-columns: repeat(3, 1fr);
   }
-  
-  .card-title {
-    color: #ee6953;
-    font-size: 1.2rem;
-    font-family: 'Fredoka One', sans-serif; /* Apply the same font */
+}
+
+@media (max-width: 992px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr);
   }
-  
-  .card-text {
-    font-family: 'Fredoka One', sans-serif; /* Apply the same font */
+}
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: 1fr;
   }
-  
-  .btn-primary {
-    background-color: #17d580;
-    border: none;
-  }
-  
+}
