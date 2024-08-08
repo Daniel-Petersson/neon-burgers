@@ -1,0 +1,31 @@
+.order-summary {
+  background-color: #2f75a9;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.order-summary h2,
+.order-summary h3 {
+  color: #ee6953;
+  font-family: 'Fredoka One', sans-serif; /* Apply the same font */
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-family: 'Fredoka One', sans-serif; /* Apply the same font */
+}
+
+.quantity-control {
+  display: flex;
+  align-items: center;
+}
+
+.quantity-control button {
+  margin: 0 5px;
+}

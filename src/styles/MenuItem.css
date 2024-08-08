@@ -1,0 +1,30 @@
+.menu-item {
+  margin-bottom: 20px;
+}
+
+.card {
+  background-color: #2f75a9;
+  color: white;
+  height: 100%; /* Ensure the card takes the full height of the column */
+}
+
+.card img {
+  height: 150px;
+  object-fit: cover; /* Ensure the image covers the full area */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  color: #ee6953;
+  font-size: 1.2rem;
+}
+
+.btn-primary {
+  background-color: #17d580;
+  border: none;
+}

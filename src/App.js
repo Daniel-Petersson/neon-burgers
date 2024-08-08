@@ -1,25 +1,69 @@
-import logo from './logo.svg';
+import React, { useState, useEffect, useCallback } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from './components/Header';
+import Menu from './components/Menu';
+import OrderSummary from './components/OrderSummary';
 import './App.css';
 
-function App() {
+
+const App = () => {
+  const [order, setOrder] = useState([]);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
+
+  useEffect(() => {
+    console.log('App rendered');
+  });
+
+  const addToOrder = useCallback((item) => {
+    setOrder((prevOrder) => {
+      const itemIndex = prevOrder.findIndex((orderItem) => orderItem.name === item.name);
+      if (itemIndex >= 0) {
+        const updatedOrder = [...prevOrder];
+        updatedOrder[itemIndex].quantity += 1;
+        return updatedOrder;
+      } else {
+        return [...prevOrder, { ...item, quantity: 1 }];
+      }
+    });
+  }, []);
+
+  const increaseQuantity = useCallback((index) => {
+    console.log('Increasing quantity for item at index:', index);
+    setOrder((prevOrder) => {
+      const updatedOrder = [...prevOrder];
+      updatedOrder[index].quantity += 1;
+      console.log('Updated order:', updatedOrder);
+      return updatedOrder;
+    });
+  }, []);
+
+  const decreaseQuantity = useCallback((index) => {
+    console.log('Decreasing quantity for item at index:', index);
+    setOrder((prevOrder) => {
+      const updatedOrder = [...prevOrder];
+      if (updatedOrder[index].quantity > 1) {
+        updatedOrder[index].quantity -= 1;
+      } else {
+        updatedOrder.splice(index, 1);
+      }
+      console.log('Updated order:', updatedOrder);
+      return updatedOrder;
+    });
+  }, []);
+
+  const toggleTheme = useCallback(() => {
+    setIsDarkTheme((prevTheme) => !prevTheme);
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
+      <Header toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+      <div className="container">
+        <Menu addToOrder={addToOrder} />
+        <OrderSummary order={order} onIncrease={increaseQuantity} onDecrease={decreaseQuantity} />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
