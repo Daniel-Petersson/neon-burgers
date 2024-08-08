@@ -1,3 +1,4 @@
+
 .menu-item {
   margin-bottom: 20px;
   flex: 1 0 auto;
@@ -38,6 +39,7 @@
 
 .card-text {
   font-family: 'Fredoka One', sans-serif;
+  margin-top: 10;
 }
 
 .btn-primary {

@@ -1,3 +1,4 @@
+//Menu.js
 import React from 'react';
 import MenuItem from './MenuItem';
 import '../styles/Menu.css'; // Updated path

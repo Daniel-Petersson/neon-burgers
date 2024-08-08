@@ -1,5 +1,5 @@
 import React from 'react';
-import OrderItem from './OrderItem';
+
 import '../styles/OrderSummary.css';
 
 const OrderSummary = ({ order, onIncrease, onDecrease }) => {
@@ -11,14 +11,17 @@ const OrderSummary = ({ order, onIncrease, onDecrease }) => {
     <div className="order-summary">
       <h2>Order Summary</h2>
       {order.map((item, index) => (
-        <OrderItem
-          key={item.name} // Use a unique key
-          name={item.name}
-          price={item.price}
-          quantity={item.quantity}
-          onIncrease={() => onIncrease(index)}
-          onDecrease={() => onDecrease(index)}
-        />
+        <div key={index} className="order-item">
+          <div className="item-info">
+            <h5>{item.name}</h5>
+            <p>${item.price.toFixed(2)}</p>
+          </div>
+          <div className="quantity-control">
+            <button className="btn btn-secondary" onClick={() => onDecrease(index)}>-</button>
+            <p>{item.quantity}</p>
+            <button className="btn btn-secondary" onClick={() => onIncrease(index)}>+</button>
+          </div>
+        </div>
       ))}
       <h3>Total: ${calculateTotal()}</h3>
     </div>

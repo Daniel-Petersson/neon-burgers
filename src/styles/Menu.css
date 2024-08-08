@@ -1,7 +1,10 @@
+
 .row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  margin-left: 150px;
+  margin-right: 20px;
 }
 
 .col-lg-3,
@@ -42,12 +45,13 @@
 .card-title {
   color: #ee6953;
   font-size: 1.2rem;
-  font-family: 'Fredoka One', sans-serif;
+  font-weight: 600;
+  font-family: Caveat;
   
 }
 
 .card-text {
-  font-family: 'Fredoka One', sans-serif;
+  font-family: Caveat;
 }
 
 .btn-primary {

@@ -2,9 +2,6 @@ body {
   font-family: 'Fredoka One', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, a {
-  font-family: 'Fredoka One', sans-serif;
-}
 
 
 .dark-theme {
@@ -12,7 +9,6 @@ h1, h2, h3, h4, h5, h6, p, span, a {
     to bottom,
     hsla(300, 84%, 39%, 1),
     hsla(49, 100%, 56%, 1)
-
   );
   color: white;
 }
@@ -28,6 +24,47 @@ h1, h2, h3, h4, h5, h6, p, span, a {
 
 .App {
   transition: background-color 0.3s, color 0.3s;
+}
+
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start; /* Align items at the start vertically */
+  justify-content: center; /* Center items horizontally */
+}
+
+.main-content > div {
+  flex: 1;
+}
+
+/* For large screens */
+@media (min-width: 992px) {
+  .main-content {
+    flex-direction: row;
+  }
+
+  .main-content > div {
+    max-width: calc(75% - 20px); /* 75% for Menu, 25% for OrderSummary */
+  }
+
+  .main-content > div:last-child {
+    max-width: 25%;
+    background-color: transparent; /* Make OrderSummary background transparent */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: add a subtle border */
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better readability */
+  }
+}
+
+/* For smaller screens */
+@media (max-width: 991px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .main-content > div {
+    max-width: 100%;
+  }
 }
 
 .container {

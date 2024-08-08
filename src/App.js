@@ -5,7 +5,6 @@ import Menu from './components/Menu';
 import OrderSummary from './components/OrderSummary';
 import './App.css';
 
-
 const App = () => {
   const [order, setOrder] = useState([]);
   const [isDarkTheme, setIsDarkTheme] = useState(true);
@@ -58,7 +57,7 @@ const App = () => {
   return (
     <div className={`App ${isDarkTheme ? 'dark-theme' : 'light-theme'}`}>
       <Header toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
-      <div className="container">
+      <div className="main-content">
         <Menu addToOrder={addToOrder} />
         <OrderSummary order={order} onIncrease={increaseQuantity} onDecrease={decreaseQuantity} />
       </div>
