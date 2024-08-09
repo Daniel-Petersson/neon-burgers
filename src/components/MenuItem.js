@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/MenuItem.css'; // Updated path
 
-const MenuItem = ({ name, price, image, addToOrder }) => {
+const MenuItem = ({ name, price, image}) => {
     return (
       <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 menu-item">
         <div className="card">
@@ -9,7 +9,7 @@ const MenuItem = ({ name, price, image, addToOrder }) => {
           <div className="card-body">
             <h5 className="card-title">{name}</h5>
             <p className="card-text">${price}</p>
-            <button className="btn btn-primary" onClick={addToOrder}>
+            <button className="btn btn-primary">
               Add to Order
             </button>
           </div>

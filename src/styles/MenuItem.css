@@ -1,14 +1,18 @@
-
+/* Existing styles for menu items */
 .menu-item {
   margin-bottom: 20px;
   flex: 1 0 auto;
   display: flex;
   align-items: stretch;
   width: 100%;
+  height: 100%;
   position: relative;
   overflow: hidden;
+  box-shadow: 8px 8px 15px rgba(0, 255, 255, 0.5), 8px 8px 15px rgba(255, 0, 255, 0.5); /* Neon shadow on the right and bottom */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Card styling */
 .card {
   background-color: #2f75a9;
   color: white;
@@ -34,15 +38,42 @@
 .card-title {
   color: #ee6953;
   font-size: 1.2rem;
+  font-weight: 600;
   font-family: 'Fredoka One', sans-serif;
 }
 
 .card-text {
   font-family: 'Fredoka One', sans-serif;
-  margin-top: 10;
+  margin-top: 10px;
 }
 
+/* Neon Button Styling */
 .btn-primary {
-  background-color: #17d580;
+  background-color: transparent;
+  color: #05fcf0;
+  border: 3px solid #05fcf0;
+  border-radius: 50px;
+  box-shadow: 0 0 5px #05fcf0,
+              0 0 15px #78fff8,
+              0 0 7px #b8fcfa inset;
+  padding: 10px 20px;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: 500ms;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 10px #05fcf0,
+              0 0 30px #05fcf0,
+              0 0 80px #78fff8,
+              0 0 10px #b8fcfa inset;
+  transform: scale(1.05);
+}
+
+.btn-primary:active {
   border: none;
+  box-shadow: 0 0 10px #78fff8;
 }

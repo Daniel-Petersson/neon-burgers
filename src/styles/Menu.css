@@ -1,62 +1,12 @@
-
+/* Menu.css */
 .row {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   margin-left: 150px;
   margin-right: 20px;
-}
-
-.col-lg-3,
-.col-md-4,
-.col-sm-6,
-.col-xs-12 {
-  display: flex;
-  align-items: stretch;
-}
-
-.menu-item {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.card {
-  background-color: #2f75a9;
-  color: white;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card img {
-  width: 100%;
-  aspect-ratio: 1 / 1; /* Ensure the image is square */
-  object-fit: cover; /* Ensure the image covers the full area */
-}
-
-.card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.card-title {
-  color: #ee6953;
-  font-size: 1.2rem;
-  font-weight: 600;
-  font-family: Caveat;
-  
-}
-
-.card-text {
-  font-family: Caveat;
-}
-
-.btn-primary {
-  background-color: #17d580;
-  border: none;
+  margin-bottom: 50px;
+  overflow: visible; /* Ensure it's set to visible */
 }
 
 /* Responsive Design */
