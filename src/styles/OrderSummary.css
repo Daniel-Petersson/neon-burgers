@@ -1,8 +1,7 @@
 .order-summary {
   background-color: transparent; /* Make background transparent */
-  color: inherit;
+  color: inherit; /* Keep this for other text elements if needed */
   padding: 20px;
- 
   margin-right: 150px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: add a subtle border */
@@ -12,13 +11,10 @@
 .order-summary h2,
 .order-summary h3 {
   position: relative;
-
   font-family: Caveat;
   padding: 0;
   margin: 0;
-  
-  color:fff;
-
+  color: #fff; /* Ensure these elements are always white */
 }
 
 .order-item {
@@ -33,6 +29,7 @@
 
 .order-item h5 {
   margin: 0;
+  color: #fff; /* Ensure these elements are always white */
 }
 
 .quantity-control {
@@ -43,12 +40,12 @@
 .quantity-control button {
   margin: 0 5px;
 }
-.order-item h5, .order-item p {
+
+.order-item h5,
+.order-item p {
   position: relative;
-  
   font-family: Caveat;
   padding: 0;
   margin: 0;
-  color: #fff;
-  
+  color: #fff; /* Ensure these elements are always white */
 }

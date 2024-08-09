@@ -1,10 +1,12 @@
+//OrderSummary.js
 import React from 'react';
-
 import '../styles/OrderSummary.css';
 
-const OrderSummary = ({ order, onIncrease, onDecrease }) => {
+const OrderSummary = ({ order, increaseQuantity, decreaseQuantity }) => {
   const calculateTotal = () => {
-    return order.reduce((total, item) => total + item.price * item.quantity, 0).toFixed(2);
+    return order
+      .reduce((total, item) => total + item.price * item.quantity, 0)
+      .toFixed(2);
   };
 
   return (
@@ -17,9 +19,19 @@ const OrderSummary = ({ order, onIncrease, onDecrease }) => {
             <p>${item.price.toFixed(2)}</p>
           </div>
           <div className="quantity-control">
-            <button className="btn btn-secondary" onClick={() => onDecrease(index)}>-</button>
+            <button
+              className="btn btn-secondary"
+              onClick={() => decreaseQuantity(item.name)}
+            >
+              -
+            </button>
             <p>{item.quantity}</p>
-            <button className="btn btn-secondary" onClick={() => onIncrease(index)}>+</button>
+            <button
+              className="btn btn-secondary"
+              onClick={() => increaseQuantity(item.name)}
+            >
+              +
+            </button>
           </div>
         </div>
       ))}
@@ -29,3 +41,4 @@ const OrderSummary = ({ order, onIncrease, onDecrease }) => {
 };
 
 export default OrderSummary;
+

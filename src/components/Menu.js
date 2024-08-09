@@ -79,7 +79,6 @@ const menuItems = [
     image: miamiViceMilkshakeImg,
   },
 ];
-
 const Menu = ({ addToOrder }) => {
   return (
     <div className="row">
@@ -89,7 +88,7 @@ const Menu = ({ addToOrder }) => {
             name={item.name}
             price={item.price}
             image={item.image}
-            addToOrder={() => addToOrder(item)}
+            addToOrder={() => addToOrder(item)} // Pass item data to addToOrder
           />
         </div>
       ))}
