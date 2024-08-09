@@ -8,21 +8,30 @@
   margin-bottom: 50px;
   overflow: visible; /* Ensure it's set to visible */
 }
-
-/* Adjustments for small screens */
-@media (max-width: 767px) {
+/* For screens smaller than 1500px */
+@media (max-width: 1499px) {
   .row {
-    grid-template-columns: repeat(2, 1fr); /* Reduce columns to 2 for smaller screens */
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr); /* Display 2 items per row */
+    gap: 20px; /* Maintain spacing between items */
+    margin-left: 20px; /* Adjust left margin for better alignment */
+    margin-right: 20px; /* Adjust right margin for better alignment */
+  }
+}
+
+/* Further adjustments for medium screens (less than 992px) */
+@media (max-width: 991px) {
+  .row {
+    grid-template-columns: repeat(2, 1fr); /* Keep 2 items per row on medium screens */
+    gap: 10px; /* Reduce gap for smaller screens */
     margin-left: 10px;
     margin-right: 10px;
   }
 }
 
-/* Adjustments for very small screens (phones) */
+/* Further adjustments for very small screens (phones) */
 @media (max-width: 480px) {
   .row {
-    grid-template-columns: 1fr; /* One column for very small screens */
+    grid-template-columns: 1fr; /* One item per row for very small screens */
     gap: 10px;
     margin-left: 10px;
     margin-right: 10px;

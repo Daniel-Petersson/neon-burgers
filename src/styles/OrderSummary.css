@@ -65,23 +65,14 @@ orderItem.css .order-item {
   .quantity-control button {
     margin: 0 5px;
   }
-
-  /* Adjustments for small screens */
-@media (max-width: 767px) {
+/* Adjustments for screens smaller than 1500px */
+@media (max-width: 1499px) {
   .order-summary {
-    margin-right: 0; /* Remove right margin */
-    margin-left: 0;
-    padding: 10px;
-    border-radius: 5px; /* Slightly reduce the border-radius */
-    box-shadow: none; /* Remove shadow to keep it clean on small screens */
-  }
-
-  .order-summary h2,
-  .order-summary h3 {
-    font-size: 1.5rem; /* Adjust font size for better readability on small screens */
-  }
-
-  .order-item {
-    grid-template-columns: 2fr 1fr 1fr; /* Adjust grid to make space for smaller screens */
+    margin: 0 auto; /* Center the order summary */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: none;
+    max-width: 600px; /* Limit the width to avoid being too wide on larger screens */
   }
 }
+

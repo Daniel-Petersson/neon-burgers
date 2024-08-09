@@ -180,3 +180,28 @@ header.css .app-header {
 .light .theme-toggle-btn {
   color: #17d580; /* Moon color for light mode */
 }
+
+/* Adjustments for screens smaller than 1500px */
+@media (max-width: 1499px) {
+  .menu-item {
+    flex: 1 0 calc(50% - 20px); /* Two items per row with spacing */
+    margin-bottom: 20px;
+    max-width: 100%; /* Ensure full width usage */
+  }
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 991px) {
+  .menu-item {
+    flex: 1 0 calc(50% - 10px); /* Keep two items per row */
+    margin-bottom: 10px;
+  }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 480px) {
+  .menu-item {
+    flex: 1 0 100%; /* Single item per row */
+    margin-bottom: 10px;
+  }
+}

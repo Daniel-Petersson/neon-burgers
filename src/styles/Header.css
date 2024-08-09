@@ -104,3 +104,39 @@
     top: -30px; /* Adjust position if needed */
   }
 }
+
+/* Adjustments for screens smaller than 1500px */
+@media (max-width: 1499px) {
+  .app-title {
+    font-size: 4em; /* Adjust title size to match smaller screens */
+  }
+
+  .app-subtitle {
+    font-size: 3em; /* Adjust subtitle size */
+    top: -50px; /* Adjust position if needed */
+  }
+}
+
+/* Further adjustments for medium screens (less than 992px) */
+@media (max-width: 991px) {
+  .app-title {
+    font-size: 3em; /* Further reduce title size */
+  }
+
+  .app-subtitle {
+    font-size: 2.5em; /* Further reduce subtitle size */
+    top: -40px; /* Adjust position if needed */
+  }
+}
+
+/* Adjustments for small screens (less than 768px) */
+@media (max-width: 767px) {
+  .app-title {
+    font-size: 2.5em; /* Reduce title size even more for small screens */
+  }
+
+  .app-subtitle {
+    font-size: 2em; /* Further reduce subtitle size */
+    top: -30px; /* Adjust position if needed */
+  }
+}
