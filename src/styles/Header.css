@@ -91,3 +91,16 @@
 .light .theme-toggle-btn {
   color: #17d580; /* Moon color for light mode */
 }
+
+
+/* Adjustments for small screens */
+@media (max-width: 767px) {
+  .app-title {
+    font-size: 3em; /* Reduce title size */
+  }
+
+  .app-subtitle {
+    font-size: 2em; /* Reduce subtitle size */
+    top: -30px; /* Adjust position if needed */
+  }
+}

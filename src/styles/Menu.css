@@ -9,21 +9,35 @@
   overflow: visible; /* Ensure it's set to visible */
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
+/* Adjustments for small screens */
+@media (max-width: 767px) {
   .row {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Reduce columns to 2 for smaller screens */
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 }
 
-@media (max-width: 992px) {
+/* Adjustments for very small screens (phones) */
+@media (max-width: 480px) {
   .row {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr; /* One column for very small screens */
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
-}
 
-@media (max-width: 768px) {
-  .row {
-    grid-template-columns: 1fr;
+  .menu-item {
+    margin-bottom: 10px;
+  }
+
+  .card-title {
+    font-size: 1rem; /* Slightly reduce font size for titles */
+  }
+
+  .btn-primary {
+    padding: 8px 16px; /* Adjust button padding */
+    font-size: 14px; /* Adjust button font size */
   }
 }

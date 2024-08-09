@@ -70,3 +70,61 @@ body {
 .container {
   margin-top: 20px;
 }
+
+/* For large screens */
+@media (min-width: 992px) {
+  .main-content {
+    flex-direction: row;
+  }
+
+  .main-content > div {
+    max-width: calc(75% - 20px); /* 75% for Menu, 25% for OrderSummary */
+  }
+
+  .main-content > div:last-child {
+    max-width: 25%;
+    background-color: transparent; /* Make OrderSummary background transparent */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: add a subtle border */
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for better readability */
+  }
+}
+
+/* For medium screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .main-content > div:last-child {
+    order: -1; /* Move OrderSummary to the top on medium screens */
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+/* For small screens */
+@media (max-width: 767px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .main-content > div {
+    max-width: 100%;
+  }
+
+  .main-content > div:last-child {
+    order: -1; /* Move OrderSummary to the top on small screens */
+    margin-right: 0;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 20px;
+  }
+
+  .main-content > div:first-child {
+    order: 1; /* Menu comes after the OrderSummary */
+  }
+}

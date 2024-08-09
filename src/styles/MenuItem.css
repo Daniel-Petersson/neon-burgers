@@ -77,3 +77,106 @@
   border: none;
   box-shadow: 0 0 10px #78fff8;
 }
+menu.css /* Menu.css */
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-left: 150px;
+  margin-right: 20px;
+  margin-bottom: 50px;
+  overflow: visible; /* Ensure it's set to visible */
+}
+header.css .app-header {
+  background-color: transparent; /* Make header background transparent */
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.app-header.dark {
+  background-color: transparent;
+}
+
+.app-header.light {
+  background-color: transparent;
+}
+
+.app-title {
+  font-size: 6em;
+  font-weight: 500;
+  font-family: "Fredoka One";
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.metal {
+  background: linear-gradient(
+    hsl(239, 50%, 30%) 15%,
+    hsl(239, 50%, 40%) 25%,
+    hsl(200, 60%, 50%) 35%,
+    hsl(100, 70%, 80%) 45%,
+    hsl(60, 100%, 98%) 50%,
+    hsl(240, 0%, 0%) 52%,
+    hsl(240, 10%, 10%) 60%,
+    hsl(240, 50%, 30%) 70%,
+    hsl(220, 70%, 60%) 80%,
+    hsl(212, 92%, 76%) 85%
+  );
+
+  -webkit-text-stroke: 2px hsl(200, 65%, 80%);
+
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.raise {
+  filter: drop-shadow(1px 3px 0px hsl(242, 54%, 10%))
+    drop-shadow(1px 3px 0px hsl(242, 54%, 15%))
+    drop-shadow(1px 3px 0px hsl(242, 54%, 20%))
+    drop-shadow(1px 3px 0px hsl(242, 54%, 25%))
+    drop-shadow(1px 3px 0px hsl(242, 54%, 30%))
+    drop-shadow(0px 0px 10px rgba(16, 16, 16, 0.4));
+}
+
+.app-title span:last-child {
+  position: relative;
+  top: -30px;
+}
+
+.app-subtitle{
+  position: relative;
+        top: -70px;
+        font-size: 4em;
+        font-weight: 600;
+        font-family: Caveat;
+        padding: 0;
+        margin: 0;
+        transform: rotateZ(-10deg);
+        color: hsl(318, 100%, 51%);
+
+        text-shadow: -2px -3px hsl(53, 100%, 81%), 5px 5px hsl(240, 90%, 61%);
+}
+.theme-toggle-btn {
+  font-size: 1.5rem;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: #17d580;
+}
+
+.dark .theme-toggle-btn {
+  color: #ffeb3b; /* Sun color for dark mode */
+}
+
+.light .theme-toggle-btn {
+  color: #17d580; /* Moon color for light mode */
+}
